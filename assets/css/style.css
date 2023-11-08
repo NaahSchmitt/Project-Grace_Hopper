@@ -1,18 +1,21 @@
 body {
-    background-color: rgb(150, 183, 194);
+    padding: 0;
+    margin: 0;
 }
 
 .header,
 .footer {
     width: 100%;
-    margin: 0 auto;
-    height: 100px;
+    margin: 0;
+    height: 80px;
+    padding: 10px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1C1C1C;
+    background-color: #000;
 }
+
 
 .footer {
     display: flex;
@@ -32,6 +35,8 @@ body {
     width: auto;
     display: flex;
     align-items: center;
+    font-size: 10px;
+    max-width: 1200px;
 }
 
 .name {
@@ -49,10 +54,15 @@ body {
     height: calc(100vh - 100px);
     background-color: #ccc;
     background-image: url('../imagens/newimages.webp');
+    width: 100%;
     background-size: cover;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: top 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .banner_area {
@@ -84,6 +94,11 @@ body {
     box-shadow: 0px 5px 0px #333;
 }
 
+
+
+
+
+
 .text {
     font-size: 35px;
 }
@@ -91,9 +106,6 @@ body {
 .text:hover {
     color: #fff;
 }
-
-
-
 
 .default {
     padding-top: 50px;
@@ -109,7 +121,7 @@ body {
 }
 
 .default .section_title {
-    font-size: 28px;
+    font-size: 25px;
     color: #ddb764;
 }
 
@@ -118,6 +130,10 @@ body {
     color: #ccc;
     margin-top: 10px;
     margin-bottom: 40px;
+}
+
+.section_desc:hover {
+    color: #575151;
 }
 
 .default .section_body {
@@ -148,12 +164,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 17px;
 }
 
+
 .default.dark {
-    background-color: #000;
+    background-color: #1C1C1C;
     height: 100px;
+}
+
+.default.dark:hover {
+    background-color: #696767;
 }
 
 .section_body p {
@@ -199,3 +220,26 @@ body {
 .section_body {
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
