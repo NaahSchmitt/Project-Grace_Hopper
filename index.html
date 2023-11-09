@@ -3,7 +3,6 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="viewport" content="user-scalable=no">
    <meta name="author" content="Natiely Alves">
    <meta name="description" content="Grace Hopper">
@@ -12,10 +11,47 @@
    <link rel="shortcut icon" type="image/png" href="assets/icones/iconmonstr-flower-2.svg">
    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Amatic+SC&family=Damion&family=
-   Manrope:wght@200&family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&family=Poppins:
-   wght@400;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Amatic+SC&family
+=Damion&family=Manrope:wght@200&family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&family=PT+Serif:ital@1&family=Poppins:wght@400;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+   <style>
+      .aboutus__right {
+          position: relative;
+          max-width: 500px;
+          margin: auto;
+          overflow: hidden;
+      }
+
+      .slide-images {
+          display: flex;
+          transition: transform 0.5s ease;
+      }
+
+      .slide-image {
+          width: 100%;
+          max-height: 100%;
+      }
+      .slide-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 10px;
+          cursor: pointer;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          outline: none;
+          z-index: 1;
+      }
+
+      .prev {
+          left: 0;
+      }
+
+      .next {
+          right: 0;
+      }
+  </style>
 
    <title>Grace Hopper</title>
 </head>
@@ -23,7 +59,7 @@
 <body>
    <header class="header">
       <a href="#">
-         <img class="img" src="assets/imagens/grace-hopper-154833_960_720.webp" alt="Grace Hopper">
+         <img class="img" src="assets/imagens/grace-hopper-154833_960_720.webp" alt="Logo Grace Hopper" title="Grace Hopper Logo">
       </a>
       <div class="div_name">
          <h1 class="name"> Grace Hopper</h1>
@@ -72,11 +108,20 @@
                <br>
             </div>
             <div class="aboutus__right">
-               <img src="assets/imagens/militarypportrait.jpg" alt="Foto de Grace Hopper" />
+               <div class="slide-images">
+                  <img src="assets/imagens/militarypportrait.jpg" alt="Foto de Grace Hopper" class="slide-image" />
+                  <img src="assets/imagens/Commodore.jpg" alt="Grace Hopper" class="slide-image" />
+               </div>
+               <button class="slide-button prev" title="Prev" onclick="changeSlide(-1)"> < </button>
+               <button class="slide-button next" title="Next" onclick="changeSlide(1)"> > </button>
             </div>
-         </div>
+            
       </div>
-   </section>
+      </div>
+     </section>
+     <script src="assets/js/slideshow.js"> </script>
+   
+
    <section class="default light">
       <div class="section_title">Termo "BUG"</div>
       <div class="section_desc"></div>
@@ -197,6 +242,7 @@
       <h2>Criado Por Natiely Alves</h2>
       <p>Créditos pelo Texto-Canal Tech</p>
    </footer>
+
 
 </body>
 
